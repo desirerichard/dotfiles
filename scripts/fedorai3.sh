@@ -18,7 +18,7 @@ function error_exit {
 sudo dnf update || error_exit "Failed to update package list."
 
 # Install apt packages
-sudo dnf -y install curl git vlc fastfetch htop alacritty ranger java-21-openjdk-devel nodejs zsh vim flatpak pavucontrol redshift-gtk feh i3 polybar rofi lxappearance stow|| error_exit "Failed to install dnf packages."
+sudo dnf -y install curl git vlc fastfetch htop alacritty ranger java-21-openjdk-devel nodejs zsh vim flatpak pulseaudio pavucontrol redshift-gtk feh i3 i3lock polybar rofi lxappearance stow scrot leafpad nemo NetworkManager network-manager-applet xclip blueman libreoffice|| error_exit "Failed to install dnf packages."
 
 # Clone Github configuration repository
 git clone "$GIT_REPO" || error_exit "Failed to clone Github repository."
