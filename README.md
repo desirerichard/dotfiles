@@ -3,9 +3,9 @@
 
 For dotfiles management, I use [GNU stow](https://www.gnu.org/software/stow/).
 
-My current theme is [Nord](https://www.nordtheme.com/).
+My current theme is [Catppuccin](https://catppuccin.com/).
 
-![screenshot](https://raw.githubusercontent.com/desirerichard/dotfiles/main/assets/screenshot.webp)
+![screenshot](https://raw.githubusercontent.com/desirerichard/dotfiles/main/assets/screenshot-catppuccin.webp)
 
 ## Software
 

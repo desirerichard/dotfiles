@@ -8,23 +8,23 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 11
 
-# Nord Theme Colors
-set $nord0 #2E3440
-set $nord1 #3B4252
-set $nord2 #434C5E
-set $nord3 #4C566A
-set $nord4 #D8DEE9
-set $nord5 #E5E9F0
-set $nord6 #ECEFF4
-set $nord7 #8FBCBB
-set $nord8 #88C0D0
-set $nord9 #81A1C1
-set $nord10 #5E81AC
-set $nord11 #BF616A
-set $nord12 #D08770
-set $nord13 #EBCB8B
-set $nord14 #A3BE8C
-set $nord15 #B48EAD
+# Catppuccin Macchiato Theme Colors
+set $catppuccin0 #24273A
+set $catppuccin1 #363A4F
+set $catppuccin2 #494D64
+set $catppuccin3 #5B6078
+set $catppuccin4 #F4DBD6
+set $catppuccin5 #F5BDE6
+set $catppuccin6 #C6A0F6
+set $catppuccin7 #ED8796
+set $catppuccin8 #EE99A0
+set $catppuccin9 #F5A97F
+set $catppuccin10 #EDD4B4
+set $catppuccin11 #A6DA95
+set $catppuccin12 #8AADF4
+set $catppuccin13 #91D7E3
+set $catppuccin14 #B7BDF8
+set $catppuccin15 #CAD3F5
 
 # Start XDG autostart .desktop files using dex.
 exec --no-startup-id dex --autostart --environment i3
@@ -57,8 +57,7 @@ bindsym $mod+Shift+q kill
 
 # Start dmenu (a program launcher).
 # bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
-bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun -theme $HOME/.config/rofi/nord.rasi"
-
+bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun -theme $HOME/.config/rofi/theme.rasi"
 
 # Change focus.
 bindsym $mod+j focus left
@@ -179,31 +178,31 @@ bindsym $mod+r mode "resize"
 #     status_command i3status
 #
 #    colors {
-#        background $nord0
-#        statusline $nord4
-#        separator $nord5
+#        background $catppuccin0
+#        statusline $catppuccin4
+#        separator $catppuccin5
 #
-#        focused_workspace  $nord8 $nord3 $nord9
-#        active_workspace   $nord8 $nord1 $nord5
-#        inactive_workspace $nord2 $nord1 $nord5
-#        urgent_workspace   $nord11 $nord1 $nord5
+#        focused_workspace  $catppuccin8 $catppuccin3 $catppuccin9
+#        active_workspace   $catppuccin8 $catppuccin1 $catppuccin5
+#        inactive_workspace $catppuccin2 $catppuccin1 $catppuccin5
+#        urgent_workspace   $catppuccin7 $catppuccin1 $catppuccin5
 #    }
 #}
 
 exec_always killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-client.focused          $nord8 $nord8 $nord4 $nord4 $nord8
-client.focused_inactive $nord2 $nord2 $nord4 $nord4 $nord2
-client.unfocused        $nord1 $nord1 $nord4 $nord4 $nord1
-client.urgent           $nord11 $nord11 $nord4 $nord4 $nord11
-client.placeholder      $nord0 $nord0 $nord4 $nord4 $nord0
+client.focused          $catppuccin6 $catppuccin6 $catppuccin6 $catppuccin6 $catppuccin6
+client.focused_inactive $catppuccin2 $catppuccin2 $catppuccin4 $catppuccin4 $catppuccin2
+client.unfocused        $catppuccin1 $catppuccin1 $catppuccin4 $catppuccin4 $catppuccin1
+client.urgent           $catppuccin7 $catppuccin7 $catppuccin4 $catppuccin4 $catppuccin7
+client.placeholder      $catppuccin0 $catppuccin0 $catppuccin4 $catppuccin4 $catppuccin0
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 2
 
 # i3lock
-bindsym $mod+Shift+x exec i3lock --color "#2E3440"
+bindsym $mod+Shift+x exec i3lock --color "#24273A"
 
 # pavucontrol
 bindsym $mod+p exec pavucontrol

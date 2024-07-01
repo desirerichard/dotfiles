@@ -1,0 +1,109 @@
+* {
+    font: "JetBrains Mono Nerd Font 12";
+
+    mocha-crust:      #181825;
+    mocha-mantle:     #1e1e2e;
+    mocha-base:       #1e1e2e;
+    mocha-surface0:   #313244;
+    mocha-surface1:   #45475a;
+    mocha-surface2:   #585b70;
+    mocha-overlay0:   #6c7086;
+    mocha-overlay1:   #7f849c;
+    mocha-overlay2:   #9399b2;
+    mocha-subtext0:   #a6adc8;
+    mocha-subtext1:   #b8c0e0;
+    mocha-text:       #cdd6f4;
+    mocha-lavender:   #b4befe;
+    mocha-blue:       #89b4fa;
+    mocha-sapphire:   #74c7ec;
+    mocha-sky:        #89dceb;
+    mocha-teal:       #94e2d5;
+    mocha-green:      #a6e3a1;
+    mocha-yellow:     #f9e2af;
+    mocha-peach:      #fab387;
+    mocha-maroon:     #eba0ac;
+    mocha-red:        #f38ba8;
+    mocha-mauve:      #cba6f7;
+    mocha-pink:       #f5c2e7;
+    mocha-flamingo:   #f2cdcd;
+    mocha-rosewater:  #f5e0dc;
+
+    background-color:   transparent;
+    text-color:         @mocha-text;
+    accent-color:       @mocha-mauve;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    background-color:   @mocha-crust;
+    border-color:       @accent-color;
+
+    location:   center;
+    width:      480px;
+    border:     1px;
+}
+
+inputbar {
+    padding:    8px 12px;
+    spacing:    12px;
+    children:   [ prompt, entry ];
+}
+
+prompt, entry, element-text, element-icon {
+    vertical-align: 0.5;
+}
+
+prompt {
+    text-color: @accent-color;
+}
+
+listview {
+    lines:      8;
+    columns:    1;
+
+    fixed-height:   false;
+}
+
+element {
+    padding:    8px;
+    spacing:    8px;
+}
+
+element normal urgent {
+    text-color: @mocha-yellow;
+}
+
+element normal active {
+    text-color: @accent-color;
+}
+
+element alternate active {
+    text-color: @accent-color;
+}
+
+element selected {
+    text-color: @mocha-crust;
+}
+
+element selected normal {
+    background-color:   @accent-color;
+}
+
+element selected urgent {
+    background-color:   @mocha-yellow;
+}
+
+element selected active {
+    background-color:   @mocha-mauve;
+}
+
+element-icon {
+    size:   0.75em;
+}
+
+element-text {
+    text-color: inherit;
+}
